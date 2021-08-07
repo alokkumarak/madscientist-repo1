@@ -1,0 +1,43 @@
+.homeleft>.MuiSvgIcon-root{
+    color: gray;
+    width: 40px;
+    height: 80px;
+   cursor: pointer;
+}
+.homeleft{
+    display: flex;
+    flex-direction: column;
+    width: 60px;
+    height: 400px;
+    background-color: rgb(229, 226, 226);
+    align-items: center;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 25vh;
+}
+@media screen and (max-width:880px){
+    .homeleft{
+        flex-direction: unset;
+        width: 400px;
+        height: 60px; 
+        justify-content: space-between;
+        align-items: center;
+        margin-top: unset;
+margin-right: auto;
+margin-left: auto;
+    }
+}
+
+@media screen and (max-width:520px){
+    .homeleft{
+        
+        width: 370px;
+    }
+}
+
+@media screen and (max-width:400px){
+    .homeleft{
+        
+        width: 280px;
+    }
+}

@@ -1,0 +1,18 @@
+.email{
+    display: flex;
+    padding: 15px;
+    padding-top: 25px;
+}
+.email_name{
+    padding-left: 15px;
+
+}
+.email_name>div{
+    font-size: 21px;
+    font-weight: bold;
+    
+}
+.email_logo>img{
+    width: 45px;
+    height: 45px;
+}

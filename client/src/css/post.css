@@ -1,0 +1,77 @@
+.MuiSvgIcon-root{
+    color: gray;
+}
+
+.post{
+    background-color: rgb(229,226,226);
+    margin: 10px;
+    padding-bottom: 20px;
+}
+.header{
+    display: flex;
+    padding-top: 50px;
+    padding-left: 20px;
+}
+.mad{
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+}
+.mad>h2{
+    font-size: 24px;
+}
+.mad>p{
+    font-size: 15px;
+}
+.content{
+    background-color: white;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 8px;
+}
+.more{
+  margin-left: 95%;  
+  cursor: pointer;
+}
+
+.post_content{
+    padding: 20px;
+}
+
+.content>p{
+padding-left: 20px;
+padding-right: 20px;
+
+}
+.header>img{
+    width: 60px;
+    height: 60px;
+}
+.like{
+    background-color: white;
+    margin: 15px;
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.like_c{
+    margin-left: 15px;
+    
+}
+.like_c>.MuiSvgIcon-root{
+    padding: 20px !important;
+    cursor: pointer;
+    color: gray;
+    width: 30px;
+    height: 30px;
+}
+
+.share>.MuiSvgIcon-root{
+    padding: 20px !important;
+    cursor: pointer;
+    color: gray;
+    width: 30px;
+    height: 30px;
+}
+
