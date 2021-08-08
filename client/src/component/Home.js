@@ -3,10 +3,12 @@ import '../css/home.css'
 import Homeleft from './Homeleft'
 import Homemiddle from './Homemiddle'
 import Homeright from './Homeright'
+import Navbar from './Navbar'
 
 const Home = () => {
     return (
         <div className="home">
+              <Navbar />
             <div className="home_left">
               <Homeleft />
             </div>

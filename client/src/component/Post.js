@@ -10,7 +10,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import SaveAltIcon from '@material-ui/icons/SaveAlt';
 import ReportIcon from '@material-ui/icons/Report';
 
-const Post = () => {
+const Post = ({topImage,id,userid,caption,photo,username,likes,completedetail}) => {
     const [anchorEl, setAnchorEl] = useState(null);
 
   const handleClick = (event) => {
@@ -23,9 +23,9 @@ const Post = () => {
     return (
         <div className="post">
             <div className="header">
-             <img src={madscience} alt="madscience" />
+             <img src={topImage} alt="madscience" />
              <div className="mad">
-                <h2>MadScientist</h2>
+                <h2>{username}</h2>
                 <p>Head of madscience</p>
              </div>
 
@@ -36,22 +36,26 @@ const Post = () => {
                 </div>
                 <hr />
                <div className="post_content">
-               Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+                {caption}
                </div>
                <p> read more...</p>
+               <img src={photo} alt="mad" width="100%" style={{marginTop:'30px',}}/>
               
             </div>
             <div className="like">
                <div className="like_c">
                   <ThumbUpIcon />
-                  <MessageIcon />
+                  <MessageIcon/>
                </div>
                <div className="share">
                        <ShareIcon />
                </div>
             </div>
-
-            <Menu
+            <div className="numbers">
+                <p>{likes} likes</p>
+                <p>see all {completedetail.comments.length} comments</p>
+            </div>
+           <Menu
         id="simple-menu"
         anchorEl={anchorEl}
         keepMounted

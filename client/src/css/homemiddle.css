@@ -26,10 +26,51 @@
     align-items: center;
     padding-left: 40px;
     color: gray;
+    cursor: pointer;
+}
+.create:hover{
+    width: 97%;
+    height: 72%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .posthere>img{
     width: 60px;
     height: 60px;
+}
+.postpage{
+    display:flex;
+    flex-direction: column;
+}
+.postpage>img{
+    width: 70px;
+    display: flex;
+    margin: auto;
+}
+.MuiDialog-paper{
+    width: 90vw;
+    height: 40vh;
+}
+
+.postthere{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(229, 226, 226);
+    padding: 20px;
+    margin: 10px;
+    border-top-left-radius:8px ;
+    border-top-right-radius: 8px;
+}
+.postthere>input{
+    height: 50px;
+    padding-left: 50px;
+    border: none;
+    padding-right: 10px;
+    margin-bottom: 20px;
+    
+}
+.postthere>input:hover{
+   outline: none;
+    
 }
 
 @media screen and (max-width:520px){

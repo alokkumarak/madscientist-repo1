@@ -7,7 +7,7 @@ const User=mongoose.model('users');
 
 router.post('/createpost',Mustlogin,(req,res)=>{
     const {caption,photo}=req.body;
-    if(!caption || !post){
+    if(!caption || !photo){
         return res.status(405).json({error:'please add all the field'});
     }
     req.user.password=undefined;

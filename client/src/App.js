@@ -1,23 +1,49 @@
-import React from 'react'
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import React,{useEffect,createContext,useReducer,useContext} from 'react'
+import {BrowserRouter as Router, Switch, Route,useHistory} from 'react-router-dom';
 import Connect from './component/Connect';
 import Home from './component/Home'
-import Navbar from './component/Navbar'
+import Login from './component/Login';
+import { initialState, reducer } from './ContextReducer/reducer';
+import Signup from './component/Signup';
 
+export const UserContext = createContext();
+
+const Routing = () => {
+
+  const history = useHistory();
+  const { state, dispatch } = useContext(UserContext);
+  useEffect(() => {
+    const user = JSON.parse(localStorage.getItem("user"))
+
+    if (user) {
+      dispatch({ type: 'USER', payload: user })
+      // history.push("/home");
+    }
+    else {
+      history.push("/login")
+
+    }
+  }, [])
+
+  return (
+    <Switch>
+      <Route exact path="/" ><Signup /></Route>
+      <Route path="/login" ><Login /></Route>
+      <Route path="/home" ><Home /></Route>
+      {/* <Route exact path="/profile" ><Profile /></Route> */}
+      {/* <Route path="/profile/:id" ><UserProfile /></Route> */}
+    </Switch>
+  )
+}
 
 function App() {
+  const [state, dispatch] = useReducer(reducer, initialState);
   return (
-   <Router>
-     <Navbar />
-     <Switch>
-       <Route exact path="/">
-         <Home />
-       </Route>
-       <Route exact path="/connect">
-         <Connect />
-       </Route>
-     </Switch>
-   </Router>
+    <UserContext.Provider value={{ state, dispatch }}>
+      <Router>
+        <Routing />
+      </Router>
+    </UserContext.Provider>
   );
 }
 

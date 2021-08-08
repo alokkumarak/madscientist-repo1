@@ -26,7 +26,7 @@ router.post('/signup',(req,res)=>{
          }
          bcrypt.hash(password,15)
            .then(hashedPassword=>{
-               const user=new user({
+               const user=new users({
                    email,
                    username,
                    password:hashedPassword,
