@@ -57,6 +57,8 @@ padding-right: 20px;
 }
 .like_c{
     margin-left: 15px;
+   display: flex;
+   align-items: center;
     
 }
 .like_c>.MuiSvgIcon-root{
@@ -65,6 +67,14 @@ padding-right: 20px;
     color: gray;
     width: 30px;
     height: 30px;
+    
+}
+.thumbs>.MuiSvgIcon-root{
+    color: blue;
+    cursor: pointer;
+}
+div>.MuiSvgIcon-root{
+    cursor: pointer;
 }
 
 .share>.MuiSvgIcon-root{
@@ -87,3 +97,54 @@ padding-right: 20px;
     color: rgb(30, 85, 87);
     font-weight: 500;
 }
+.addcomment > .MuiPaper-root {
+    display: flex;
+    justify-content: center;
+    align-items: center !important;
+    background: rgb(250, 252, 252) !important;
+   
+    border-radius: 999px;
+    width: 360px;
+    /* margin-left: 200px !important; */
+    margin-top: 10px !important;
+   
+  }
+  .commentFiled {
+    color: #1f1a1a !important;
+    width: 300px;
+    border-radius: 999px;
+  }
+  button {
+    background-color: transparent;
+    border: none;
+  }
+  button>.MuiSvgIcon-root{
+      color: rgb(231, 144, 144);
+  }
+
+  .showComment{
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      -ms-overflow-style: none; /* for Internet Explorer, Edge */
+      scrollbar-width: none; /* for Firefox */
+      overflow-y: scroll;
+      flex: 0.9;
+  }
+  .showComment::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+  }
+  .singleComment{
+      display: flex;
+      padding: 10px;
+      align-items: center;
+  }
+
+  .commentName{
+      color: red;
+      font-size: 20px;
+      text-transform: capitalize;
+  }
+  .commentComment{
+      color: rgb(109, 105, 105);
+  }
