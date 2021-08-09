@@ -56,3 +56,76 @@
     padding-right: 10px;
     font-size: 20px;
 }
+
+@media screen and (max-width:550px) {
+    .madlogo > img{
+        width: 40px;
+        height: 40px;
+        padding: 5px;
+     }
+     .madlog > img{
+         width: 40px;
+         height: 40px;
+         padding: 5px;
+     }
+     .mad{
+        
+        padding-right: 5px;
+        font-size: 16px;
+    }
+    .search{
+        margin-left: 5px;
+        width: 170px;
+        height: 35px;
+   
+    }
+    .nav__left{
+       
+        margin-left: 10px;
+    }
+    .nav__right{
+       
+        margin-right: 10px;
+    }
+    .navbar{
+        display: flex;
+        justify-content:space-evenly;
+    }
+}
+
+
+@media screen and (max-width:410px) {
+    .madlogo > img{
+        width: 35px;
+        height: 35px;
+        padding: 5px;
+     }
+     .madlog > img{
+         width: 35px;
+         height: 35px;
+         padding: 5px;
+     }
+     .mad{
+        
+        padding-right: unset;
+        font-size: 14px;
+    }
+    .search{
+        margin-left: 3px;
+        width: 150px;
+        height: 35px;
+   
+    }
+    .nav__left{
+       
+        margin-left: 10px;
+    }
+    .nav__right{
+       
+        margin-right: 10px;
+    }
+    .navbar{
+        display: flex;
+        justify-content:space-evenly;
+    }
+}

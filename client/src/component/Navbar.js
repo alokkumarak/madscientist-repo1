@@ -8,7 +8,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import PowerSettingsNewIcon from '@material-ui/icons/PowerSettingsNew';
 import { UserContext } from '../App';
-import { useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 const Navbar = () => {
   const history = useHistory();
@@ -41,9 +41,11 @@ const Navbar = () => {
         <AppBar>
         <div className="navbar">
             <div className="nav__left">
+              <Link to="/home">
                 <div className="madlogo">
                     <img src={madscience} alt="madscience" />
                 </div>
+                </Link>
                <div className="search">
                  <SearchIcon />
                  <input type="text" placeholder="what do you want?" />
@@ -65,7 +67,7 @@ const Navbar = () => {
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
-        <MenuItem onClick={handleClose}><AccountCircleIcon />&nbsp;  <span style={{fontSize:'20px',color:'gray'}}>profile</span></MenuItem>
+        <MenuItem onClick={handleClose}><AccountCircleIcon />&nbsp;  <Link to="/profile"><span style={{fontSize:'20px',color:'gray'}}>profile</span></Link></MenuItem>
         <MenuItem onClick={logout}><PowerSettingsNewIcon />&nbsp;   <span style={{fontSize:'20px',color:'gray'}}>logout</span></MenuItem>
       </Menu>
     </AppBar>
